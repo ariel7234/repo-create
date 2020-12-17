@@ -7,7 +7,7 @@
 
 ## Automatically create a new Github repository by a simple command
 
-### Simple bash script & Python Web Scrapying practice
+### Simple bash script & Python Web Scraping practice
 
 Automate my process of creating a new project with entering `create [project name]` in terminal to achieve the following process:
 
