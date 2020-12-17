@@ -2,7 +2,6 @@
 
 ### 簡單的Bash script ＋ Python 爬蟲練習
 把每次新增專案的流程自動化，在terminal輸入 `create [專案名稱]`就可以做到以下流程： </br>
-</br>
 
 `新增資料夾 --> git init --> 新增git repo --> git remote 等 --> 開啟vscode`
 
