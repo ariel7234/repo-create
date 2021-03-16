@@ -1,4 +1,4 @@
-## 自動建立新Github reposiroty
+## 自動建立新Github repository
 
 ### 簡單的Bash script ＋ Python 爬蟲練習
 把每次新增專案的流程自動化，在terminal輸入 `create [專案名稱]`就可以做到以下流程： </br>
