@@ -5,22 +5,22 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-username = "username"
-password = "password"
+username = "ariel7234"
+password = "Letscreate2gether!"
 repo_name = os.environ["DIR"]
 
-driver = webdriver.Safari()
+driver = webdriver.Chrome()
 
 driver.get("https://github.com/login")
-driver.find_element_by_id("login_field").send_keys(username)
-driver.find_element_by_id("password").send_keys(password)
-driver.find_element_by_name("commit").click()
+driver.find_element(by=By.ID, value="login_field").send_keys(username)
+driver.find_element(by=By.ID, value="password").send_keys(password)
+driver.find_element(by=By.NAME, value="commit").click()
 WebDriverWait(driver=driver, timeout=10).until(
     lambda x: x.execute_script("return document.readyState === 'complete'")
 )
 error_message = "Incorrect username or password."
 
-errors = driver.find_elements_by_class_name("flash-error")
+errors = driver.find_elements(by=By.CLASS_NAME, value="flash-error")
 
 for e in errors:
     print(e.text)
@@ -37,14 +37,14 @@ button = (
     .click()
 )
 
-driver.find_element_by_xpath('//*[@id="repository_name"]').send_keys(repo_name)
+driver.find_element(by=By.XPATH, value='//*[@id="repository_name"]').send_keys(repo_name)
 
 WebDriverWait(driver=driver, timeout=10).until(
     lambda x: x.execute_script("return document.readyState === 'complete'")
 )
 error_message = "The repository already exists on this account"
 
-errors = driver.find_elements_by_id("input-check-4622")
+errors = driver.find_element(by=By.ID, value="input-check-4622")
 
 for e in errors:
     print(e.text)
