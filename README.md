@@ -6,10 +6,9 @@
 
 `新增資料夾 --> git init --> 新增git repo --> git remote 等 --> 開啟vscode`
 
-```
-[20230327更新]:
-若Github有設定兩步驟驗證，會無法使用網頁爬蟲的方式新增並連結到github repo，只能改用script建立local repo並等待使用者輸入git remote url。
-```
+> [20230327更新]:
+> 若Github有設定兩步驟驗證，會無法使用網頁爬蟲的方式新增並連結到github repo
+> 只能改用script建立local repo並等待使用者輸入git remote url。
 
 # Automatically create a new Github repository by a simple command
 
@@ -26,21 +25,21 @@ Custom command has two function:
 
 Steps:
 1. Create a new folder for your custom command
-2. Copy `.my-cmd.sh` to the folder you create
-3. Open `.my-cmd.sh` in any kind to text editor you prefer, and change the following variable to your local setting.
+2. Copy `my-cmd.sh` to the folder you create
+3. Open `my-cmd.sh` and change the following variable to your local setting:
    - `CMDIR`: your custom command folder path
    - `PROJECT_ROOT`: your project root path
 4. Add execution permission
 ```bash
 chmod +x .my-cmd.sh
 ```
-1. Add custom command to `~/.zshrc`
-  
+5. Add custom command to `~/.zshrc`
 ```bash
 vim ~/.zshrc
 # add 
 source ~/your-custom-command-folder-path/.my-cmd.sh
-```
+```  
+
 6. Source zshrc
 ```bash
 source ~/.zshrc
